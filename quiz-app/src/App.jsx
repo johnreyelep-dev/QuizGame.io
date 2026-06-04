@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import LandingPage from "./component/LandingPage.jsx";
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from "./pages/LandingPage.jsx";
+import QuizPage from "./pages/QuizPage.jsx";
 import './index.css'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
-    <>
-      <LandingPage />
-    </>
+    <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/quiz" element={<QuizPage/>}/>
+    </Routes>
   )
 }
 
