@@ -1,6 +1,6 @@
 export async function quizApi() {
     const cached = sessionStorage.getItem("quiz");
-    if (cached) return JSON.parse(cached);  // ✅ survives page refresh
+    if (cached) return JSON.parse(cached);
 
     try {
         const res = await fetch("https://opentdb.com/api.php?amount=10&type=multiple");
